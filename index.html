@@ -25,6 +25,7 @@
   <section id="menu">
     <input type="button" onClick="showProfile()"id="btnperfil" value="PERFIL">
     <input type = "button" onClick ="showSaldo()" id="btnsaldo" value="SALDO">
+    <input type="button" onClick ="showCalculo()" id="btncalcular"value="Calculo de Saldo">
   </section>
 
   <section id="perfil">
@@ -38,10 +39,14 @@
 <section id="saldo">
   <input type="text" id=saldoTarjeta placeholder="N° Tarjeta">
   <input type="button" id ="btnsaldotarjeta" value="Saldo">
-          <p id="tarjeta"></p>
-          <p id="saldo"></p>
+          <p id="infotarjeta"></p>
+          <p id="infosaldo"></p>
           <p id="contrato"></p>
           <p id="fecha"></p>
+</section>
+
+<section id="calculo">
+<div id="numTarjeta"></div>
 </section>
 
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>

@@ -7,3 +7,8 @@ function showSaldo(){
   document.getElementById('saldo').style.display = 'block';
   document.getElementById('menu').style.display = 'none';
 }
+
+function showCalculo(){
+  document.getElementById('calculo').style.display='block';
+  document.getElementById('menu').style.display='none';
+}

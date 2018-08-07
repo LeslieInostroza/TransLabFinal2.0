@@ -64,6 +64,10 @@ firebase.database().ref('tarjeta')
   nTarjeta.innerHTML+=`
   <p>${newTarjeta.val().text} </p>`;
 
+  numTarjeta.innerHTML+=`
+  <select>
+  <option>${newTarjeta.val().text}</option>
+  </select>`;
 });
 
 function sendTarjeta() {

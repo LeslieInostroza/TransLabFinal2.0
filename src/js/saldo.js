@@ -13,8 +13,8 @@ btnsaldotarjeta.addEventListener('click', () => {
     }
   }).then((data) => {
     console.log(data);
-    document.getElementById('tarjeta').innerHTML = 'N° : ' + data['N&ordm; tarjeta bip! '];
-    document.getElementById('saldo').innerHTML = 'Su saldo es : ' + data['Saldo  tarjeta'];
+    document.getElementById('infotarjeta').innerHTML = 'N° Tarjeta : ' + data['N&ordm; tarjeta bip! '];
+    document.getElementById('infosaldo').innerHTML = 'Su saldo es : ' + data['Saldo  tarjeta'];
     document.getElementById('fecha').innerHTML = 'Fecha y Hora : ' + data['Fecha saldo'];
   });
 });
