@@ -1,3 +1,8 @@
+body {
+  background-color: rgb(61, 58, 58);
+  text-align: center;
+}
+
 #perfil {
   display: none;
 }
@@ -17,4 +22,23 @@
   font-size: 30px;
   text-align: center;
   color: #F6A800;
+}
+.btn-primary {
+  background-color: #F6A800;
+  color: black;
+  width: 100%;
+}
+.rowFormLogin {
+  text-align: center;
+}
+p{
+  color: white;
+}
+#register {
+  color: #F6A800;
+  background-color: transparent;
+  border: none;
+}
+#email #password {
+  border-color: #F6A800;
 }
