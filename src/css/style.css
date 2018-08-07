@@ -7,3 +7,14 @@
 #calculo{
   display: none;
 }
+
+/*Diseño Login*/
+#imgLogo{
+  width: 40%;
+  padding-top: 20%;
+}
+#title{
+  font-size: 30px;
+  text-align: center;
+  color: #F6A800;
+}

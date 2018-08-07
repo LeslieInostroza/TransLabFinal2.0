@@ -1,15 +1,13 @@
 window.onload = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      loggedOut.style.display = 'none';
-      loggedIn.style.display = 'block';
+      document.getElementById('Sectionlogin').style.display ='none';
       document.getElementById('menu').style.display = 'block';
       console.log('User' + JSON.stringify(user));
       const email = firebase.auth().currentUser.email;
       username.innerHTML= email;
     } else {
-      loggedOut.style.display = 'block';
-      loggedIn.style.display = 'none';
+      document.getElementById('Sectionlogin').style.display ='block';
       document.getElementById('menu').style.display = 'none';
     }
   });
@@ -30,8 +28,8 @@ const register = () => {
 
 
 const login = () => {
-  const emailValue = email.value;
-  const passwordValue = password.value;
+  const emailValue = document.getElementById('email').value;
+  const passwordValue = document.getElementById('password').value;
   firebase.auth().signInWithEmailAndPassword(emailValue, passwordValue)
   .then(() => {
     console.log('Usuario Logeado');

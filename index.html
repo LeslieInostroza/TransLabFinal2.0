@@ -5,22 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TransLabBip</title>
+  <!-- link Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <!-- link propio -->
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-  <h1>TransLabBip</h1>
-  <section id="Sectionlogin">
-    <div id="loggedIn">
-      <p id ="userName"></p>
-      <input id ="logOutButton" onClick = "logOut()"type="button" value = "Cerrar Sesion">
+  <header></header>
+
+  <section class="container-fluid" id="Sectionlogin">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <img src="src/css/img/imagen.png" id="imgLogo" alt="logo">
+      </div>
+      <div class="col-1"></div>
     </div>
-    <div id="loggedOut">
-    <input id = "email" type = "email" placeholder="Correo Electronico">
-    <input id = "password" type = "password" placeholder="contraseña">
-    <input id = "register" onClick="register()" type ="button" value="Registrar"></input>
-    <input id = "login" type="button" onClick = "login()" value="Entrar">
-  </div>
+
+    <div class="rowForm">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail" id="title">TRANSLABIP</label>
+          <input class="form-control" id="email" type="email" aria-describedby="emailHelp" placeholder="Correo Electronico">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword"></label>
+            <input class="form-control" id="password" type="password" placeholder="contraseña">
+        </div>
+        <div class="form-group form-check"></div>
+        <button type="button" onclick="login()" class="btn btn-primary" id="btn">Iniciar sesión</button>
+      </form>
+    </div>
+    
+    <div class="rowThree">
+        <p id="wrong"></p>
+        <p>¿Olvidaste tu contraseña?</p>
+        <p>¿NO TIENES CUENTA?
+            <input id = "register" onClick="register()" type ="button" value="Registrar">
+        </p>
+      </div>
   </section>
+
+    
+  <input id ="logOutButton" onClick = "logOut()"type="button" value = "Cerrar Sesion">
 
   <section id="menu">
     <input type="button" onClick="showProfile()"id="btnperfil" value="PERFIL">
@@ -62,6 +91,14 @@
   };
   firebase.initializeApp(config);
 </script>
+<!-- script Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+crossorigin="anonymous"></script>
+<!-- script propios -->
 <script src="src/js/saldo.js"></script>
 <script src="src/js/login.js"></script>
 <script src="src/js/main.js"></script>
