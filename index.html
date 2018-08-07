@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TransLabBip</title>
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+  <h1>TransLabBip</h1>
+  <section id="Sectionlogin">
+    <div id="loggedIn">
+      <p id ="userName"></p>
+      <input id ="logOutButton" onClick = "logOut()"type="button" value = "Cerrar Sesion">
+    </div>
+    <div id="loggedOut">
+    <input id = "email" type = "email" placeholder="Correo Electronico">
+    <input id = "password" type = "password" placeholder="contraseña">
+    <input id = "register" onClick="register()" type ="button" value="Registrar"></input>
+    <input id = "login" type="button" onClick = "login()" value="Entrar">
+  </div>
+  </section>
+
+  <section id="menu">
+    <input type="button" onClick="showProfile()"id="btnperfil" value="PERFIL">
+    <input type = "button" onClick ="showSaldo()" id="btnsaldo" value="SALDO">
+  </section>
+
+  <section id="perfil">
+      <p id="username"></p>
+      <input type="text" id="agregarTarjeta" placeholder="Numero de tarjeta">
+      <input type="button" onClick="sendTarjeta()" id ="btnTarjeta" value ="agregar tarjeta">
+
+      <div id="nTarjeta"></div>
+  </section>
+
+<section id="saldo">
+  <input type="text" id=saldoTarjeta placeholder="N° Tarjeta">
+  <input type="button" id ="btnsaldotarjeta" value="Saldo">
+          <p id="tarjeta"></p>
+          <p id="saldo"></p>
+          <p id="contrato"></p>
+          <p id="fecha"></p>
+</section>
+
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCgOKf6ixfmGuBdriw6H9TIIYPJK-VCrwE",
+    authDomain: "translabbip.firebaseapp.com",
+    databaseURL: "https://translabbip.firebaseio.com",
+    projectId: "translabbip",
+    storageBucket: "translabbip.appspot.com",
+    messagingSenderId: "336845466920"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="src/js/saldo.js"></script>
+<script src="src/js/login.js"></script>
+<script src="src/js/main.js"></script>
+</body>
+</html>
