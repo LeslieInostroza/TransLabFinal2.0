@@ -1,14 +1,14 @@
-function showProfile(){
+const showProfile = () => {
   document.getElementById('perfil').style.display = 'block';
   document.getElementById('menu').style.display = 'none';
 }
 
-function showSaldo(){
+const showSaldo = () => {
   document.getElementById('saldo').style.display = 'block';
   document.getElementById('menu').style.display = 'none';
 }
 
-function showCalculo(){
+const showCalculo = () => {
   document.getElementById('calculo').style.display='block';
   document.getElementById('menu').style.display='none';
 }
