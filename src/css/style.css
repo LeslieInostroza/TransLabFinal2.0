@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(61, 58, 58);
+  background-color: #3E3F41;
   text-align: center;
 }
 
@@ -41,4 +41,32 @@ p{
 }
 #email #password {
   border-color: #F6A800;
+}
+
+/*Diseño Menu*/
+.btnMenu{
+  background-color: #F6A800;
+  color: white;
+  margin-top: 1%;
+  margin-bottom: 4%;
+  width: 100%;
+}
+/*diseño perfil*/
+#username{
+  margin-left: 20%;
+  color: white;
+}
+#agregarTarjeta{
+  width: 80%;
+  margin-top: 3%;
+  border: none;
+  margin-left: 10%;
+  background-color:whitesmoke;
+}
+#btnTarjeta{
+  background-color: #F6A800;
+  color: white;
+  width: 80%;
+  margin-top: 3%;
+  margin-left: 10%;
 }

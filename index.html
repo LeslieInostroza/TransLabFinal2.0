@@ -51,16 +51,36 @@
     
   <input id ="logOutButton" onClick = "logOut()"type="button" value = "Cerrar Sesion">
 
-  <section id="menu">
-    <input type="button" onClick="showProfile()"id="btnperfil" value="PERFIL">
-    <input type = "button" onClick ="showSaldo()" id="btnsaldo" value="SALDO">
-    <input type="button" onClick ="showCalculo()" id="btncalcular"value="Calculo de Saldo">
+  <section class="container-fluid" id="menu">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="col-sm-11">
+          <input type="button" class="btnMenu" onClick="showProfile()"id="btnperfil" value="PERFIL">
+        </div>
+        <div class="col-sm-11">
+          <input type = "button" class="btnMenu" onClick ="showSaldo()" id="btnsaldo" value="VER SALDO">
+        </div>
+        <div class="col-sm-11">
+          <input type="button" class="btnMenu" onClick ="showCalculo()" id="btncalcular"value="CALCULAR TARIFA">
+        </div>
+        <div class="col-sm-11">
+          <input type="button" class="btnMenu" onClick ="" id="btncalcular"value="PREGUNTAS FRECUENTES">
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="perfil">
-      <p id="username"></p>
-      <input type="text" id="agregarTarjeta" placeholder="Numero de tarjeta">
-      <input type="button" onClick="sendTarjeta()" id ="btnTarjeta" value ="agregar tarjeta">
+  <section class="container-fluid" id="perfil">
+    <div class="row">
+      <div id="username"></div>
+    </div>
+    <div class="row">
+        <input class="form-control"type="text" id="agregarTarjeta" placeholder="Numero de tarjeta">
+    </div>
+      <div class="row">
+        <input type="button" onClick="sendTarjeta()"class="btn btn-primary"id ="btnTarjeta" value ="agregar tarjeta">
+      </div>
+      
 
       <div id="nTarjeta"></div>
   </section>
@@ -99,8 +119,10 @@ crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
 crossorigin="anonymous"></script>
 <!-- script propios -->
+<script src="src/js/perfil.js"></script>
 <script src="src/js/saldo.js"></script>
 <script src="src/js/login.js"></script>
+<script src="src/js/menu.js"></script>
 <script src="src/js/main.js"></script>
 </body>
 </html>
