@@ -14,4 +14,5 @@ window.onload = () => {
       document.getElementById('preguntas').style.display = 'none';
     }
   });
+  document.getElementById('btnsaldotarjeta').addEventListener('click', drawSaldo);
 };

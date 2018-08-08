@@ -175,6 +175,9 @@ p{
   background-color: #F6A800;
   width: 100%;
 }
+.card{
+  width: 100%;
+}
 @media(min-width: 768px){
   .menunav{
       width: 20vw;
