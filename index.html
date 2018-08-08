@@ -12,7 +12,29 @@
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-  <header></header>
+  <header id="headerMenu">
+    <div class="pos-f-t">
+      <nav class="navbar navbar-dark barMenu">
+        <button onclick="navMenu()" class="navbar-toggler" type="button" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <nav id="side" class="nav flex-column float-left menunav  menuClosed">
+        <div onclick="navMenu()" class="close_button">
+          <span aria-hidden="true">&times;</span>
+        </div>
+        <div class="contentMenu">
+          <a class="nav-link" onclick="showSaldo()" href="#">Ver saldo</a>
+          <a class="nav-link" onclick="showCalculo()" href="#">Calcular tarifa</a>
+          <a class="nav-link" onclick="showProfile()" href="#">Perfil</a>
+          <a class="nav-link" onclick="" href="#">Preguntas frecuentes</a>
+          <a class="nav-link" onclick="showMenu()" href="#">Home</a>
+          <a class="nav-link" onclick="logOut()" href="#">Cerrar sesión</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
   <section class="container-fluid" id="Sectionlogin">
     <div class="row">
@@ -48,9 +70,6 @@
       </div>
   </section>
 
-    
-  <input id ="logOutButton" onClick = "logOut()"type="button" value = "Cerrar Sesion">
-
   <section class="container-fluid" id="menu">
     <div class="row">
       <div class="col-sm-12">
@@ -85,19 +104,58 @@
       <div id="nTarjeta"></div>
   </section>
 
-<section id="saldo">
-  <input type="text" id=saldoTarjeta placeholder="N° Tarjeta">
-  <input type="button" id ="btnsaldotarjeta" value="Saldo">
-          <p id="infotarjeta"></p>
-          <p id="infosaldo"></p>
-          <p id="contrato"></p>
-          <p id="fecha"></p>
+<section class="container-fluid" id="saldo">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <input type="number" id=saldoTarjeta placeholder="Numero Tarjeta">
+    </div>
+    <div class="infosTarjetas">
+        <p id="infotarjeta"></p>
+        <p id="infosaldo"></p>
+        <p id="contrato"></p>
+        <p id="fecha"></p>
+    </div>
+    <div class="col-sm-10">
+      <button type="button" id ="btnsaldotarjeta" class="btn btn-secondary btn-lg">Saldo</button>
+    </div>
+
 </section>
 
-<section id="calculo">
-<div id="numTarjeta"></div>
+<section class="container-fluid" id="calculo">
+  <div class="row">
+    <br>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <input type="number" id="cardNumber" placeholder="Número de tarjeta">
+    </div>
+    <br>
+    <div class="col-sm-1"></div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <span id="tarifa">Tarifa</span>
+      <span> Tarjeta </span>
+      <div class="input-group mb-3">
+        <select class="Seleccione su tarjeta" id="inputPrice">
+          <option selected>Tarifa</option>
+          <option value="760">Punta 760</option>
+          <option value="680">Valle 680</option>
+          <option value="630">Baja 630</option>
+        </select>
+        <select class="Seleccione su tarjeta" id="numTarjeta"></select>
+      </div>
+    </div>
+    <div class="col-sm-10">
+      <button type="button" id="btnCalculate" class="btn btn-secondary btn-lg">Calcular</button>
+    </div>
+  </div>
+  <div id=""></div>
 </section>
 
+<section id="reguntas"></section>
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script>
   // Initialize Firebase

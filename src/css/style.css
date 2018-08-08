@@ -2,7 +2,12 @@ body {
   background-color: #3E3F41;
   text-align: center;
 }
-
+#headerMenu{
+  display: none;
+}
+#menu{
+  display : none;
+}
 #perfil {
   display: none;
 }
@@ -11,6 +16,44 @@ body {
 }
 #calculo{
   display: none;
+}
+/*Diseño Nav*/
+.nav-link {
+  color: black;
+}
+.menunav{
+  position: absolute;
+  top:0;
+  height: 100vh; 
+  width: 60vw;  
+  transition: 0.5s ease-out
+}
+.barMenu {
+  background-color: rgb(61, 58, 58);
+}
+.menuClosed{
+  left: -90vw;
+}
+
+.menuOpen{
+  left: 0;
+}
+.close_button{ 
+  font-size: xx-large;
+  color: black;
+  position: absolute;
+  right: 10px;                   
+}
+.contentMenu{
+  padding: 10px;
+  margin-top: 20px;
+}
+#side {
+  background-color: #fafafa;
+  z-index: 1;
+}
+.navbar-toggler {
+  border: none;
 }
 
 /*Diseño Login*/
@@ -69,4 +112,45 @@ p{
   width: 80%;
   margin-top: 3%;
   margin-left: 10%;
+}
+
+/*Diseño Saldo*/
+#btnsaldotarjeta{
+  background-color: #F6A800;
+}
+#saldoTarjeta{
+  width: 90%;
+}
+.infosTarjetas{
+  margin-top: 10%;
+  margin-bottom: 30%;
+}
+#infosaldo{
+  width: 100%;
+  margin-left: 20%;
+  text-align: center;
+  font-weight: bold;
+  background-color: #F6A800;
+}
+#infotarjeta{
+  width: 100%;
+  margin-left: 20%;
+  text-align: center;
+  font-weight: bold;
+  background-color: #F6A800;
+}
+#fecha{
+  width: 100%;
+  margin-left: 20%;
+  text-align: center;
+  font-weight: bold;
+  background-color: #F6A800;
+}
+@media(min-width: 768px){
+  .menunav{
+      width: 20vw;
+  }
+  .menuClosed{
+      left:-20vw;
+  }
 }
