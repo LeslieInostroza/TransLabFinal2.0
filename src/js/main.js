@@ -11,6 +11,7 @@ window.onload = () => {
       document.getElementById('Sectionlogin').style.display ='block';
       document.getElementById('menu').style.display = 'none';
       document.getElementById('headerMenu').style.display = 'none';
+      document.getElementById('preguntas').style.display = 'none';
     }
   });
 };

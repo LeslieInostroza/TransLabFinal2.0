@@ -28,7 +28,7 @@
           <a class="nav-link" onclick="showSaldo()" href="#">Ver saldo</a>
           <a class="nav-link" onclick="showCalculo()" href="#">Calcular tarifa</a>
           <a class="nav-link" onclick="showProfile()" href="#">Perfil</a>
-          <a class="nav-link" onclick="" href="#">Preguntas frecuentes</a>
+          <a class="nav-link" onclick="showPreguntas()" href="#">Preguntas frecuentes</a>
           <a class="nav-link" onclick="showMenu()" href="#">Home</a>
           <a class="nav-link" onclick="logOut()" href="#">Cerrar sesión</a>
         </div>
@@ -83,7 +83,7 @@
           <input type="button" class="btnMenu" onClick ="showCalculo()" id="btncalcular"value="CALCULAR TARIFA">
         </div>
         <div class="col-sm-11">
-          <input type="button" class="btnMenu" onClick ="" id="btncalcular"value="PREGUNTAS FRECUENTES">
+          <input type="button" class="btnMenu" onClick ="showPreguntas()" id="btncalcular"value="PREGUNTAS FRECUENTES">
         </div>
       </div>
     </div>
@@ -94,17 +94,14 @@
       <div id="username"></div>
     </div>
     <div class="row">
-        <input class="form-control"type="text" id="agregarTarjeta" placeholder="Numero de tarjeta">
+        <input class="form-control"type="text" id="agregarTarjeta" placeholder="Agregar tarjeta">
     </div>
       <div class="row">
         <input type="button" onClick="sendTarjeta()"class="btn btn-primary"id ="btnTarjeta" value ="agregar tarjeta">
       </div>
-      
-
       <div id="nTarjeta"></div>
   </section>
-
-<section class="container-fluid" id="saldo">
+  <section class="container-fluid" id="saldo">
   <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
@@ -119,43 +116,79 @@
     <div class="col-sm-10">
       <button type="button" id ="btnsaldotarjeta" class="btn btn-secondary btn-lg">Saldo</button>
     </div>
-
-</section>
-
-<section class="container-fluid" id="calculo">
-  <div class="row">
-    <br>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-10">
-      <input type="number" id="cardNumber" placeholder="Número de tarjeta">
+  </section>
+  <section class="container-fluid" id="calculo">
+    <div class="row">
+      <br>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <input type="number" id="tarjetNum" placeholder="Numero de tarjeta">
+      </div>
+      <br>
+      <div class="col-sm-1"></div>
     </div>
     <br>
-    <div class="col-sm-1"></div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <span id="tarifa">Tarifa</span>
-      <span> Tarjeta </span>
-      <div class="input-group mb-3">
-        <select class="Seleccione su tarjeta" id="inputPrice">
-          <option selected>Tarifa</option>
-          <option value="760">Punta 760</option>
-          <option value="680">Valle 680</option>
-          <option value="630">Baja 630</option>
-        </select>
-        <select class="Seleccione su tarjeta" id="numTarjeta"></select>
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-5">
+        <span id="tarifa">Tarifa</span>
+        <span> Tarjeta </span>
+        <div class="input-group mb-3">
+          <select class="SelecTarifa" id="SelecTarifa">
+            <option selected>Tarifa</option>
+            <option value="760">Punta 760</option>
+            <option value="680">Valle 680</option>
+            <option value="630">Baja 630</option>
+          </select>
+          <select class="SelecTarjeta" id="numTarjeta">
+            <option selected>Seleccione Tarjeta</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-10">
+        <button type="button" id="btnCalculo" class="btn btn-secondary btn-lg">Calcular</button>
       </div>
     </div>
-    <div class="col-sm-10">
-      <button type="button" id="btnCalculate" class="btn btn-secondary btn-lg">Calcular</button>
+  </section>
+  
+  <section class="container-fluid preguntasFrecuentes" id="preguntas">
+    <div>
+      <h4>Preguntas Frecuentes</h4>
     </div>
-  </div>
-  <div id=""></div>
-</section>
-
-<section id="reguntas"></section>
+    <div class="row">
+      <div id="accordion" role="tablist">
+        <div class="card">
+          <div class="card-header" role="tab" id="">
+            <h5 class="mb-0">
+              <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                ¿Pregunta Uno blablablabdasdasdl?
+              </a>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="card-body">
+              lalalalallalalala
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" role="tab">
+            <h5 class="mb-0">
+              <a class="" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  ¿Pregunta Dos blblbfsdfsfsdfdsflblblblblbl?
+                </a>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby>
+              <div class="card-body">
+               lalalalalalala
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+<!-- script FIrebase -->
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script>
   // Initialize Firebase
