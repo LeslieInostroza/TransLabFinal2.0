@@ -28,4 +28,9 @@ firebase.database().ref('tarjeta')
   <select>
   <option>${newTarjeta.val().text}</option>
   </select>`;
+
+  numTarjetaSaldo.innerHTML+=`
+  <select>
+  <option>${newTarjeta.val().text}</option>
+  </select>`;
 });

@@ -1,9 +1,12 @@
 let saldoTarjeta = document.getElementById('saldoTarjeta');
+let saldoSelect = document.getElementById('numTarjetaSaldo');
 saldoTarjeta.value = localStorage.getItem('saldoTarjeta');
+saldoSelect.value = localStorage.getItem('saldoSelect');
 
 const drawSaldo = () => {
   let digTarjeta = saldoTarjeta.value;
-  fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${digTarjeta}`)
+  let selectSaldo = saldoSelect.value;
+  fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${digTarjeta || selectSaldo}`)
   .then((response) => {
     if (response.ok) {
       return response.json();
