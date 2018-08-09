@@ -1,5 +1,5 @@
 body {
-  background-color: #3E3F41;
+  background-color:#3E3F41;
   text-align: center;
 }
 #headerMenu{
@@ -32,7 +32,7 @@ body {
   transition: 0.5s ease-out
 }
 .barMenu {
-  background-color: rgb(61, 58, 58);
+  background-color: #3E3F41;
 }
 .menuClosed{
   left: -90vw;
@@ -61,6 +61,9 @@ body {
 }
 
 /*Diseño Login*/
+#Sectionlogin{
+  background-color: #3E3F41;
+}
 #imgLogo{
   width: 40%;
   padding-top: 20%;
@@ -91,17 +94,31 @@ p{
 }
 
 /*Diseño Menu*/
+#menu{
+  background-color: #DDDEE0;
+  padding-bottom: 100%;
+}
 .btnMenu{
   background-color: #F6A800;
   color: white;
-  margin-top: 1%;
+  margin-top: 10%;
   margin-bottom: 4%;
   width: 100%;
 }
 /*diseño perfil*/
+#perfil{
+  background-color: #DDDEE0;
+  padding-bottom: 100%;
+}
+#imgPerfil{
+  width: 70%;
+}
+.avatar{
+  background-color: #F6A800;
+}
 #username{
   margin-left: 20%;
-  color: white;
+  color: black;
 }
 #agregarTarjeta{
   width: 80%;
@@ -110,15 +127,23 @@ p{
   margin-left: 10%;
   background-color:whitesmoke;
 }
+#nTarjeta{
+  background-color: #F6A800;
+}
 #btnTarjeta{
   background-color: #F6A800;
   color: white;
   width: 80%;
   margin-top: 3%;
   margin-left: 10%;
+  margin-bottom: 3%;
 }
 
 /*Diseño Saldo*/
+#saldo{
+  background-color: #DDDEE0;
+  padding-bottom: 100%;
+}
 #btnsaldotarjeta{
   background-color: #F6A800;
 }
@@ -152,8 +177,10 @@ p{
 }
 /*Diseño Calculo*/
 #calculo{
-  background-color: grey;
+  background-color: #DDDEE0;
+  padding-bottom: 100%;
 }
+
 #tarjetNum{
   width: 80%;
   text-align: center;
@@ -172,9 +199,12 @@ p{
   font-size: 16px;
 }
 /*DIseño Preguntas*/
-.preguntasFrecuentes {
+#preguntas{
+  background-color: #DDDEE0;
+  padding-bottom: 100%;
+}
+.answers {
   background-color: #F6A800;
-  width: 100%;
 }
 .card{
   width: 100%;

@@ -76,16 +76,16 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="col-sm-11">
-          <input type="button" class="btnMenu" onClick="showProfile()"id="btnperfil" value="PERFIL">
+          <input type="button" class="btn btn-secondary btn-lg btnMenu" onClick="showProfile()"id="btnperfil" value="Perfil">
         </div>
         <div class="col-sm-11">
-          <input type = "button" class="btnMenu" onClick ="showSaldo()" id="btnsaldo" value="VER SALDO">
+          <input type = "button" class="btn btn-secondary btn-lg btnMenu" onClick ="showSaldo()" id="btnsaldo" value="Ver Saldo">
         </div>
         <div class="col-sm-11">
-          <input type="button" class="btnMenu" onClick ="showCalculo()" id="btncalcular"value="CALCULAR TARIFA">
+          <input type="button" class="btn btn-secondary btn-lg btnMenu" onClick ="showCalculo()" id="btncalcular"value="Calcular Tarifa">
         </div>
         <div class="col-sm-11">
-          <input type="button" class="btnMenu" onClick ="showPreguntas()" id="btncalcular"value="PREGUNTAS FRECUENTES">
+          <input type="button" class="btn btn-secondary btn-lg btnMenu" onClick ="showPreguntas()" id="btncalcular"value="Preguntas Frecuentes">
         </div>
       </div>
     </div>
@@ -93,6 +93,11 @@
 
   <section class="container-fluid" id="perfil">
     <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10 avatar">
+        <img src="src/css/img/usuario.png" id="imgPerfil" alt="avatarperfil">
+      </div>
+      <div class="col-1"></div>
       <div id="username"></div>
     </div>
     <div class="row">
@@ -101,7 +106,14 @@
       <div class="row">
         <input type="button" onClick="sendTarjeta()"class="btn btn-primary"id ="btnTarjeta" value ="agregar tarjeta">
       </div>
-      <div id="nTarjeta"></div>
+      <div class="row">
+          <div class="col-1"></div>
+          <div class="col-10">
+              <div id="nTarjeta"></div>
+          </div>
+          
+      </div>
+      
   </section>
   <section class="container-fluid" id="saldo">
   <div class="row">
@@ -155,18 +167,22 @@
       <div class="col-sm-10">
         <button type="button" id="btnCalculo" class="btn btn-secondary btn-lg">Calcular</button>
       </div>
-
       <div class="infosTarjetas">
-       <p id = "valorSaldo"></p>
-       <p id="finalCalculo"></p>
+        <div class="vSaldo">
+          <p id ="valorSaldo"></p>
+        </div>
+        <div class="vSaldo">
+          <p id="finalCalculo"></p>
+        </div>
+       
     </div>
     </div>
   </section>
   
   <section class="container-fluid preguntasFrecuentes" id="preguntas">
-    <div>
-      <h4>Preguntas Frecuentes</h4>
-    </div>
+    
+      <h4 class="answers">Preguntas Frecuentes</h4>
+  
     <div class="row">
       <div id="accordion" role="tablist">
         <div class="card">

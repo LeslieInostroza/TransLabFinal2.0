@@ -25,3 +25,7 @@ const drawCalculate = () => {
    finalCalculo.innerHTML = '$' + finalCalculate;  
   });
 };
+
+window.calculate = function(){
+  
+}
