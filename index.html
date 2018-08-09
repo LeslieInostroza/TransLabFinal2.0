@@ -8,6 +8,7 @@
   <!-- link Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!-- link propio -->
   <link rel="stylesheet" href="src/css/style.css">
 </head>
@@ -25,12 +26,12 @@
           <span aria-hidden="true">&times;</span>
         </div>
         <div class="contentMenu">
-          <a class="nav-link" onclick="showSaldo()" href="#">Ver saldo</a>
-          <a class="nav-link" onclick="showCalculo()" href="#">Calcular tarifa</a>
-          <a class="nav-link" onclick="showProfile()" href="#">Perfil</a>
-          <a class="nav-link" onclick="showPreguntas()" href="#">Preguntas frecuentes</a>
-          <a class="nav-link" onclick="showMenu()" href="#">Home</a>
-          <a class="nav-link" onclick="logOut()" href="#">Cerrar sesión</a>
+          <a class="nav-link" onclick="showSaldo()" href="#"><i class="far fa-credit-card"></i> Ver saldo</a>
+          <a class="nav-link" onclick="showCalculo()" href="#"><i class="fas fa-calculator"></i> Calcular tarifa</a>
+          <a class="nav-link" onclick="showProfile()" href="#"><i class="fas fa-user-circle"></i> Perfil</a>
+          <a class="nav-link" onclick="showPreguntas()" href="#"><i class="fas fa-question-circle"></i> Preguntas frecuentes</a>
+          <a class="nav-link" onclick="showMenu()" href="#"><i class="fas fa-home"></i> Home</a>
+          <a class="nav-link" onclick="logOut()" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
         </div>
       </nav>
     </div>
@@ -106,19 +107,21 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
       <input type="number" id=saldoTarjeta placeholder="Numero Tarjeta">
+      <select class="SelecTarjeta" id="numTarjetaSaldo">
+          <option selected>Seleccione Tarjeta</option>
+        </select>
     </div>
-    <select class="SelecTarjeta" id="numTarjetaSaldo">
-        <option selected>Seleccione Tarjeta</option>
-      </select>
+
     <div class="infosTarjetas">
-        <p id="infotarjeta"></p>
-        <p id="infosaldo"></p>
-        <p id="contrato"></p>
-        <p id="fecha"></p>
+      <p id="infotarjeta"></p>
+      <p id="infosaldo"></p>
+      <p id="contrato"></p>
+      <p id="fecha"></p>
     </div>
     <div class="col-sm-10">
       <button type="button" id ="btnsaldotarjeta" class="btn btn-secondary btn-lg">Saldo</button>
     </div>
+  </div>
   </section>
   <section class="container-fluid" id="calculo">
     <div class="row">
@@ -151,8 +154,9 @@
       <div class="col-sm-10">
         <button type="button" id="btnCalculo" class="btn btn-secondary btn-lg">Calcular</button>
       </div>
+
       <div class="infosTarjetas">
-       <p id = "selectSaldo"></p>
+       <p id = "valorSaldo"></p>
        <p id="finalCalculo"></p>
     </div>
     </div>

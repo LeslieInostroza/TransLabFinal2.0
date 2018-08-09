@@ -16,4 +16,5 @@ window.onload = () => {
   });
   document.getElementById('btnsaldotarjeta').addEventListener('click', drawSaldo);
   document.getElementById('btnCalculo').addEventListener('click', drawCalculate);
+  document.getElementById('SelecTarifa').addEventListener('click', drawSelect);
 };

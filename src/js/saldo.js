@@ -6,7 +6,7 @@ saldoSelect.value = localStorage.getItem('saldoSelect');
 const drawSaldo = () => {
   let digTarjeta = saldoTarjeta.value;
   let selectSaldo = saldoSelect.value;
-  fetch(`http://www.psep.cl/api/Bip.php?&numberBip=${digTarjeta || selectSaldo}`)
+  fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${digTarjeta || selectSaldo}`)
   .then((response) => {
     if (response.ok) {
       return response.json();
@@ -15,8 +15,8 @@ const drawSaldo = () => {
     }
   }).then((data) => {
     console.log(data);
-    infotarjeta.innerHTML = 'N° Tarjeta : ' + data['N&ordm; tarjeta bip! '];
-    infosaldo.innerHTML = 'Su saldo es : ' + data['Saldo  tarjeta'];
-    fecha.innerHTML = 'Fecha y Hora : ' + data['Fecha saldo'];
+    infotarjeta.innerHTML = 'N° Tarjeta : ' + data['id'];
+    infosaldo.innerHTML = 'Su saldo es : ' + data['saldoTarjeta'];
+    fecha.innerHTML = 'Fecha y Hora : ' + data['fechaSaldo'];
   });
 };
