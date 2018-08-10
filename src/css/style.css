@@ -22,7 +22,12 @@ body {
 }
 /*Diseño Nav*/
 .nav-link {
-  color: black;
+  color:#F6A800;
+  padding: 10%;
+}
+a:hover {
+  color: #3E3F41;
+  text-decoration: underline;
 }
 .menunav{
   position: absolute;
@@ -77,6 +82,7 @@ body {
   background-color: #F6A800;
   color: black;
   width: 100%;
+  border: none;
 }
 .rowFormLogin {
   text-align: center;
@@ -118,8 +124,9 @@ p{
   background-color: #F6A800;
 }
 #username{
-  margin-left: 20%;
   color: black;
+  background-color: white;
+  width: 100%;
 }
 #agregarTarjeta{
   width: 80%;
@@ -138,6 +145,7 @@ p{
   margin-top: 3%;
   margin-left: 10%;
   margin-bottom: 3%;
+  border: none;
 }
 
 /*Diseño Saldo*/
@@ -207,7 +215,7 @@ p{
 }
 .titleCalculate{
   text-align: center;
-  background-color: black;
+  background-color: #3E3F41;
   color:white;
   margin: 0;
 }
@@ -232,6 +240,11 @@ p{
 }
 .answers {
   background-color: #F6A800;
+  width: 100%;
+}
+.txtanswers{
+  padding: 10%;
+  color: white;
 }
 .card{
   width: 100%;
