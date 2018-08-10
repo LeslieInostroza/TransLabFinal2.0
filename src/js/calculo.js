@@ -9,7 +9,7 @@ const drawSelect = () => {
   valorSaldo.innerHTML = '$' + selectValor;
 }
 
-const drawCalculate = () => {
+window.drawCalculate = () => {
  let calculoCard = calculoTarjeta.value;
  let selectCard = selectTarjeta.value;
  fetch(`https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${calculoCard || selectCard}`)
@@ -25,7 +25,3 @@ const drawCalculate = () => {
    finalCalculo.innerHTML = '$' + finalCalculate;  
   });
 };
-
-window.calculate = function(){
-  
-}
