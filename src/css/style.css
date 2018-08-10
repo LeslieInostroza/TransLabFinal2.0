@@ -104,6 +104,7 @@ p{
   margin-top: 10%;
   margin-bottom: 4%;
   width: 100%;
+  border: none;
 }
 /*diseño perfil*/
 #perfil{
@@ -140,42 +141,38 @@ p{
 }
 
 /*Diseño Saldo*/
+#numTarjetaSaldo{
+  width: 90%;
+  background-color: white;
+  border: none;
+  height: 6vh;
+}
 #saldo{
   background-color: #DDDEE0;
   padding-bottom: 100%;
 }
 #btnsaldotarjeta{
   background-color: #F6A800;
+  border: none;
+  width: 90%;
 }
 #saldoTarjeta{
   width: 90%;
+  margin: 10% 5%;
 }
-.infosTarjetas{
-  margin-top: 10%;
-  margin-bottom: 30%;
-}
-#infosaldo{
+#infosaldo, #infotarjeta, #fecha{
+  margin: 0%;
   width: 100%;
-  margin-left: 20%;
-  text-align: center;
-  font-weight: bold;
-  background-color: #F6A800;
-}
-#infotarjeta{
-  width: 100%;
-  margin-left: 20%;
-  text-align: center;
-  font-weight: bold;
-  background-color: #F6A800;
-}
-#fecha{
-  width: 100%;
-  margin-left: 20%;
+  padding: 5%;
   text-align: center;
   font-weight: bold;
   background-color: #F6A800;
 }
 /*Diseño Calculo*/
+.infosTarjetas{
+  width: 80%;
+  margin: 12%;
+}
 #calculo{
   background-color: #DDDEE0;
   padding-bottom: 100%;
@@ -190,13 +187,43 @@ p{
 }
 #SelecTarifa{
   display: inline-block;
-  margin-right: 4%;
+  margin-right: 5%;
+  border: none;
+  background-color: white;
+  width: 45%;
+}
+#numTarjeta{
+  border: none;
+  background-color: white;
+  height: 5vh;
+  width: 45%;
 }
 #btnCalculo{
   background-color: #F6A800;
   color: white;
   width: 50%;
   font-size: 16px;
+  border: none;
+}
+.titleCalculate{
+  text-align: center;
+  background-color: black;
+  color:white;
+  margin: 0;
+}
+#valorSaldo, #finalCalculo{
+  margin: 0%;
+  width: 100%;
+  padding: 5%;
+  margin-bottom: 6%;
+  text-align: center;
+  font-weight: bold;
+  background-color: #F6A800;
+}
+
+.vSaldo{
+  background-color: #F6A800;
+  width: 100%;
 }
 /*DIseño Preguntas*/
 #preguntas{
