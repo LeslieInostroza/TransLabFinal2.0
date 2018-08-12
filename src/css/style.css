@@ -87,7 +87,7 @@ a:hover {
 .rowFormLogin {
   text-align: center;
 }
-p{
+.pLogin{
   color: white;
 }
 #register {
@@ -136,7 +136,8 @@ p{
   background-color:whitesmoke;
 }
 #nTarjeta{
-  background-color: #F6A800;
+  background-color: white;
+  margin: 5%;
 }
 #btnTarjeta{
   background-color: #F6A800;
@@ -167,6 +168,10 @@ p{
 #saldoTarjeta{
   width: 90%;
   margin: 10% 5%;
+  text-align: center;
+  border: none;
+  border-bottom: solid #3E3F41;
+  background-color: transparent;
 }
 #infosaldo, #infotarjeta, #fecha{
   margin: 0%;
@@ -189,6 +194,9 @@ p{
 #tarjetNum{
   width: 80%;
   text-align: center;
+  border: none;
+  background-color: transparent;
+  border-bottom: solid #3E3F41;
 }
 #tarifa {
   margin-right: 40%;
